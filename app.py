@@ -10,7 +10,7 @@ import time
 
 app = Flask(__name__)
 
-# In-memory queue storage (use Redis in production)
+# In-memory queue storage 
 task_queue = {}
 task_results = {}
 
@@ -202,7 +202,6 @@ Content: {content[:2000]}"""
     except Exception as e:
         return {"error": f"Scraping failed: {str(e)}"}
 
-# API Endpoints
 
 @app.route('/health', methods=['GET'])
 def health():
